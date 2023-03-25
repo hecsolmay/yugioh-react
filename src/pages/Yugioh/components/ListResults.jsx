@@ -4,8 +4,6 @@ import { getCards } from "../../../services/yugi.services";
 import Pagination from "./Pagination";
 import SearchedCard from "./SearchCard";
 
-const API_YUGI_URL = "https://db.ygoprodeck.com/api/v7/cardinfo.php";
-
 const ListResults = () => {
   const [params] = useSearchParams();
   const [cards, setCards] = useState([]);
