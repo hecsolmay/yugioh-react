@@ -3,7 +3,7 @@ import React from "react";
 export const OptionsMobile = ({ handleSelelectOption }) => {
   return (
     <div className="sm:hidden">
-      <label for="tabs" className="sr-only">
+      <label htmlFor="tabs" className="sr-only">
         Select tab
       </label>
       <select
@@ -13,7 +13,7 @@ export const OptionsMobile = ({ handleSelelectOption }) => {
       >
         <option value="ilustracion">Ilustración</option>
         <option value="datos">Datos de la carta</option>
-        <option value="description">Descripción</option>
+        <option value="description">Extras</option>
       </select>
     </div>
   );
@@ -73,7 +73,7 @@ export const TabSelect = ({ handleSelelect, active }) => {
           role="tab"
           className={active === "description" ? descriptionActive : descriptionDisable}
         >
-          Descripción
+          Extras
         </button>
       </li>
     </ul>

@@ -1,186 +1,96 @@
 import React from "react";
 
-const Description = () => {
+const Description = ({ cardSets, prices = [] }) => {
+  const expantionsTHeads = [
+    "Nombre del set",
+    "Codigo del set",
+    "Rareza",
+    "Codigo de Rareza",
+    "Precio del set",
+  ];
+
+  const pricesTitles = ["Plataforma", "Precio"];
   return (
-    <div
-      className="p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800"
-      id="faq"
-      role="tabpanel"
-      aria-labelledby="faq-tab"
-    >
-      <div
-        id="accordion-flush"
-        data-accordion="collapse"
-        data-active-classNamees="bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-        data-inactive-classNamees="text-gray-500 dark:text-gray-400"
-      >
-        <h2 id="accordion-flush-heading-1">
-          <button
-            type="button"
-            className="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
-            data-accordion-target="#accordion-flush-body-1"
-            aria-expanded="true"
-            aria-controls="accordion-flush-body-1"
-          >
-            <span>What is Flowbite?</span>
-            <svg
-              data-accordion-icon
-              className="w-6 h-6 rotate-180 shrink-0"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                clip-rule="evenodd"
-              ></path>
-            </svg>
-          </button>
-        </h2>
-        <div
-          id="accordion-flush-body-1"
-          className="hidden"
-          aria-labelledby="accordion-flush-heading-1"
-        >
-          <div className="py-5 font-light border-b border-gray-200 dark:border-gray-700">
-            <p className="mb-2 text-gray-500 dark:text-gray-400">
-              Flowbite is an open-source library of interactive components built
-              on top of Tailwind CSS including buttons, dropdowns, modals,
-              navbars, and more.
-            </p>
-            <p className="text-gray-500 dark:text-gray-400">
-              Check out this guide to learn how to{" "}
-              <a
-                href="/docs/getting-started/introduction/"
-                className="text-blue-600 dark:text-blue-500 hover:underline"
-              >
-                get started
-              </a>{" "}
-              and start developing websites even faster with components on top
-              of Tailwind CSS.
-            </p>
-          </div>
-        </div>
-        <h2 id="accordion-flush-heading-2">
-          <button
-            type="button"
-            className="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
-            data-accordion-target="#accordion-flush-body-2"
-            aria-expanded="false"
-            aria-controls="accordion-flush-body-2"
-          >
-            <span>Is there a Figma file available?</span>
-            <svg
-              data-accordion-icon
-              className="w-6 h-6 shrink-0"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                clip-rule="evenodd"
-              ></path>
-            </svg>
-          </button>
-        </h2>
-        <div
-          id="accordion-flush-body-2"
-          className="hidden"
-          aria-labelledby="accordion-flush-heading-2"
-        >
-          <div className="py-5 font-light border-b border-gray-200 dark:border-gray-700">
-            <p className="mb-2 text-gray-500 dark:text-gray-400">
-              Flowbite is first conceptualized and designed using the Figma
-              software so everything you see in the library has a design
-              equivalent in our Figma file.
-            </p>
-            <p className="text-gray-500 dark:text-gray-400">
-              Check out the{" "}
-              <a
-                href="https://flowbite.com/figma/"
-                className="text-blue-600 dark:text-blue-500 hover:underline"
-              >
-                Figma design system
-              </a>{" "}
-              based on the utility classNamees from Tailwind CSS and components
-              from Flowbite.
-            </p>
-          </div>
-        </div>
-        <h2 id="accordion-flush-heading-3">
-          <button
-            type="button"
-            className="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
-            data-accordion-target="#accordion-flush-body-3"
-            aria-expanded="false"
-            aria-controls="accordion-flush-body-3"
-          >
-            <span>
-              What are the differences between Flowbite and Tailwind UI?
-            </span>
-            <svg
-              data-accordion-icon
-              className="w-6 h-6 shrink-0"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                clip-rule="evenodd"
-              ></path>
-            </svg>
-          </button>
-        </h2>
-        <div
-          id="accordion-flush-body-3"
-          className="hidden"
-          aria-labelledby="accordion-flush-heading-3"
-        >
-          <div className="py-5 font-light border-b border-gray-200 dark:border-gray-700">
-            <p className="mb-2 text-gray-500 dark:text-gray-400">
-              The main difference is that the core components from Flowbite are
-              open source under the MIT license, whereas Tailwind UI is a paid
-              product. Another difference is that Flowbite relies on smaller and
-              standalone components, whereas Tailwind UI offers sections of
-              pages.
-            </p>
-            <p className="mb-2 text-gray-500 dark:text-gray-400">
-              However, we actually recommend using both Flowbite, Flowbite Pro,
-              and even Tailwind UI as there is no technical reason stopping you
-              from using the best of two worlds.
-            </p>
-            <p className="mb-2 text-gray-500 dark:text-gray-400">
-              Learn more about these technologies:
-            </p>
-            <ul className="pl-5 text-gray-500 list-disc dark:text-gray-400">
-              <li>
-                <a
-                  href="https://flowbite.com/pro/"
-                  className="text-blue-600 dark:text-blue-500 hover:underline"
-                >
-                  Flowbite Pro
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://tailwindui.com/"
-                  rel="nofollow"
-                  className="text-blue-600 dark:text-blue-500 hover:underline"
-                >
-                  Tailwind UI
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
+    <div className="p-4 pt-5 pb-5 grid bg-white rounded-lg md:p-8 dark:bg-gray-800 content-center items-center self-center">
+      <div style={{ margin: "auto" }}>
+        <section>
+          <h2 className="text-white mb-5">Expanciones</h2>
+
+          <Table>
+            <THeads titles={expantionsTHeads} />
+            <TBodySets cardSets={cardSets} />
+          </Table>
+        </section>
+        <section className="mt-8">
+          <h2 className="text-white mb-5">Precios</h2>
+          <Table>
+            <THeads titles={pricesTitles} />
+            <TBodyPrice cardPrices={prices} />
+          </Table>
+        </section>
       </div>
     </div>
   );
 };
 
 export default Description;
+
+function Table({ children }) {
+  return (
+    <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
+      <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+        {children}
+      </table>
+    </div>
+  );
+}
+
+function THeads({ titles = [] }) {
+  return (
+    <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+      <tr>
+        {titles.map((t) => (
+          <th key={t} scope="col" className="px-6 py-3">
+            {t}
+          </th>
+        ))}
+      </tr>
+    </thead>
+  );
+}
+
+function TBodySets({ cardSets = [{}] }) {
+  return (
+    <tbody>
+      {cardSets.map((c) => (
+        <tr
+          className="bg-white border-b dark:bg-gray-900 dark:border-gray-700"
+          key={c.set_code}
+        >
+          <th scope="row" className="px-6 py-4 text-gray-900 dark:text-white">
+            {c.set_name}
+          </th>
+          <td className="px-6 py-4">{c.set_code}</td>
+          <td className="px-6 py-4">{c.set_rarity}</td>
+          <td className="px-6 py-4">{c.set_rarity_code}</td>
+          <td className="px-6 py-4">{`$${c.set_price}`}</td>
+        </tr>
+      ))}
+    </tbody>
+  );
+}
+
+function TBodyPrice({ cardPrices = [{}] }) {
+  return (
+    <tbody>
+      {cardPrices.map((p) => (
+        <tr class="bg-white dark:bg-gray-800">
+          <th class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+            {p.name}
+          </th>
+          <td class="px-6 py-4">{p.price}</td>
+        </tr>
+      ))}
+    </tbody>
+  );
+}

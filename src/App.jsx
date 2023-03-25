@@ -4,15 +4,18 @@ import Home from "./pages/Home/";
 import Yugioh from "./pages/Yugioh/";
 import React from "react";
 import CardDetails from "./pages/CardDetails/";
+import SideBar from "./components/SideBar";
 
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/yugi" element={<Yugioh />} />
-        <Route path="/details" element={<CardDetails />} />
-      </Routes>
+      <SideBar>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/yugi" element={<Yugioh />} />
+          <Route path="/details/:id" element={<CardDetails />} />
+        </Routes>
+      </SideBar>
     </BrowserRouter>
   );
 }

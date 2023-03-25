@@ -1,15 +1,15 @@
 import React from "react";
 import Container from "../../components/Container";
 import Search from "../../components/Search";
-import { useSearchParams } from "react-router-dom";
+import ListResults from "./components/ListResults";
+import Pagination from "./components/Pagination";
 
 const Yugioh = () => {
-  const [params] = useSearchParams();
-
   return (
-    <Container>
+    <Container title="Yugi-Wiki">
       <Search />
-      <div>Lista de resultados</div>
+      <div>Lista de Cartas</div>
+      <ListResults />
     </Container>
   );
 };
